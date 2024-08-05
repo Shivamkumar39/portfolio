@@ -69,6 +69,9 @@ const userSchema = new mongoose.Schema({
   resetPasswordExpire: Date,
 });
 
+
+//for bcyript password
+
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();
