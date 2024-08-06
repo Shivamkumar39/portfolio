@@ -1,14 +1,15 @@
-import React from 'react'
-import Navbar from './NavBar'
+import React, { useState } from 'react'
 import HomePage from './Homepage'
 import Project from './Project'
 import Footer from './Footer'
 import Contact from './Contact'
 
 const Home = () => {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/> */}
         <HomePage/>
         <Project/>
         <Contact/>
