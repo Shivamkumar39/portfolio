@@ -1,22 +1,14 @@
-import mongoose from "mongoose";
+import mongoose, { Types } from "mongoose";
 
 const skillSchema = new mongoose.Schema({
-  title: {
+  Skill_Name:{
     type: String,
+    require: true,
   },
-  proficiency: {
-    type: Number,
-  },
-  svg: {
-    public_id: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-  },
+  Skill_Description:{
+    type: String,
+  }
+
 });
 
 export const Skill = mongoose.model("Skill", skillSchema);
