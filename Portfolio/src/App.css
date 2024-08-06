@@ -54,3 +54,15 @@
       0 0 20px rgb(150, 150, 150);
   }
 }
+
+::-webkit-scrollbar{
+  width: 0;
+  background: white;
+}
+::-webkit-scrollbar-thumb{
+  background: white;
+  background-clip: border-box;
+}
+::-webkit-scrollbar-track{
+  background: white;
+}

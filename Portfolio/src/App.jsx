@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import PostProject from './Components/PostProject';
 import Navbar from './pages/Navbar';
 import Project from './pages/Project';
+import './App.css'
 //import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {

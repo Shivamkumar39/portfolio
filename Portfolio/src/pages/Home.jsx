@@ -4,6 +4,7 @@ import Project from './Project'
 import Footer from './Footer'
 import Contact from './Contact'
 import Aboutme from './Aboutme'
+import Skills from './Education'
 
 const Home = () => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,6 +14,7 @@ const Home = () => {
         {/* <Navbar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/> */}
         <HomePage/>
         <Aboutme/>
+        <Skills/>
         <Project/>
         <Contact/>
         <Footer/>
