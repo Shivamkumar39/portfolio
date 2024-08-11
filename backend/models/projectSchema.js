@@ -5,9 +5,15 @@ const projectSchema = new mongoose.Schema({
     type: String,
     
   },
-  description: String,
-  gitRepoLink: String,
-  projectLink: String,
+  description:{
+    type:String,
+  },
+  gitRepoLink:{
+    type:String,
+  },
+  projectLink:{
+    type:String,
+  },
   technologies: String,
   image:{
     

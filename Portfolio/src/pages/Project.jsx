@@ -3,18 +3,47 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import homeImage0 from '../assets/Image/HomeImage.png';
 import 'animate.css';
+import { Button } from '@material-tailwind/react';
 
 const Project = () => {
-  const projects = new Map();
-  for (let i = 0; i < 10; i++) {
-    projects.set(i, {
-      title: `Project ${i + 1}`,
+  const projects = [
+    {
+      title: 'Softwere Downloder',
       category: 'Web Application',
       image: homeImage0,
-    });
-  }
-
-  const visibleProjects = Array.from(projects.values()).slice(0, 6);
+      link: 'https://github.com/Shivamkumar39/Programmer_media', // Unique link for Project 1
+    },
+    {
+      title: 'Event Manager',
+      category: 'Web Application',
+      image: homeImage0,
+      link: 'https://github.com/Shivamkumar39/Event-Mangment-App', // Unique link for Project 2
+    },
+    {
+      title: 'inotbook',
+      category: 'Web Application',
+      image: homeImage0,
+      link: 'https://github.com/Shivamkumar39/inotbook', // Unique link for Project 3
+    },
+    {
+      title: 'Blogging-page',
+      category: 'Web Application',
+      image: homeImage0,
+      link: 'https://github.com/Shivamkumar39/Blog-page', // Unique link for Project 4
+    },
+    {
+      title: 'shivam_CV-(First-CV)',
+      category: 'Web Application',
+      image: homeImage0,
+      link: 'https://github.com/Shivamkumar39/shivam_CV', // Unique link for Project 5
+    },
+    {
+      title: 'Firebse-Authentication',
+      category: 'Web Application',
+      image: homeImage0,
+      link: 'https://github.com/Shivamkumar39/FirebseAuthentication', // Unique link for Project 6
+    },
+  ];
 
   return (
     <section className="py-20 px-6 bg-gray-50">
@@ -40,33 +69,26 @@ const Project = () => {
         </select>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-center justify-center ">
-        {visibleProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <div
             key={index}
             className="bg-white hover:bg-blue-gray-400 p-6 shadow-lg rounded-lg transform transition duration-500 hover:scale-105 animate__animated"
           >
             <img
               src={project.image}
-              alt="Project"
+              alt={project.title}
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
             <h3 className="text-xl font-bold mb-2">{project.title}</h3>
             <p className="text-gray-900 mb-4">{project.category}</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-              View Project
-            </button>
+            <Link to={project.link}>
+              <Button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                View Project
+              </Button>
+            </Link>
           </div>
         ))}
       </div>
-      {projects.size > 6 && (
-        <div className="text-center mt-6 animate__animated animate__fadeInUp">
-          <Link to="/more-projects">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
-              See More Projects
-            </button>
-          </Link>
-        </div>
-      )}
     </section>
   );
 };
