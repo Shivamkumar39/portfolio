@@ -1,7 +1,7 @@
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
+I am using React.js and Tailwind CSS for the frontend. Although I initially planned to use a backend, time constraints led me to stop backend development. Despite this, I want to use Redux Toolkit for state management on the frontend, even without a backend
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
